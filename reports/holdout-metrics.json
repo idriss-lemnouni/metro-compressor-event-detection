@@ -1,0 +1,177 @@
+{
+  "source": "https://archive.ics.uci.edu/static/public/791/metropt+3+dataset.zip",
+  "archive_bytes": 218381995,
+  "archive_sha256": "aab991a970e58210de853bb8078ce0e63abb4d9412fdc5c79792dae3d8e1721a",
+  "diagnostics": {
+    "rows": 1516948,
+    "gaps_over_one_minute": 331,
+    "sparse_observed_windows": 387,
+    "scorable_windows": 50395,
+    "interior_nonscorable_windows": 10997,
+    "first_timestamp": "2020-02-01T00:00:00",
+    "last_timestamp": "2020-09-01T03:59:50",
+    "common_spacing_seconds": [
+      [
+        10.0,
+        1337521
+      ],
+      [
+        9.0,
+        128277
+      ],
+      [
+        12.0,
+        38321
+      ],
+      [
+        13.0,
+        7988
+      ],
+      [
+        11.0,
+        4471
+      ]
+    ]
+  },
+  "calibration_alert_budget": 1.0,
+  "splits": {
+    "fit": {
+      "rows": 7088,
+      "scorable_days": 24.61111111111111,
+      "modes": {
+        "other": 6603,
+        "loaded": 485
+      }
+    },
+    "calibration": {
+      "rows": 7603,
+      "scorable_days": 26.399305555555557,
+      "modes": {
+        "other": 6687,
+        "loaded": 916
+      }
+    },
+    "test": {
+      "rows": 35704,
+      "scorable_days": 123.97222222222223,
+      "modes": {
+        "other": 31045,
+        "loaded": 4659
+      }
+    }
+  },
+  "detectors": {
+    "pressure": {
+      "calibration": {
+        "threshold": -8.118,
+        "quantile": 0.9,
+        "alert_count": 5,
+        "alerts_per_scorable_day": 0.1893989214783638
+      },
+      "test": {
+        "alert_count": 28,
+        "unmatched_alerts": 18,
+        "unmatched_alerts_per_scorable_day": 0.14519381581895585,
+        "reported_incidents": 4,
+        "observable_incidents": 4,
+        "matched_incidents": 2,
+        "incident_recall": 0.5,
+        "before_start": 0,
+        "outcomes": [
+          {
+            "id": "UCI-01",
+            "start": "2020-04-18T00:00:00",
+            "end": "2020-04-18T23:59:00",
+            "scored_windows": 358,
+            "first_alert": null,
+            "lead_minutes": null,
+            "alerts_in_window": 0
+          },
+          {
+            "id": "UCI-02",
+            "start": "2020-05-29T23:30:00",
+            "end": "2020-05-30T06:00:00",
+            "scored_windows": 151,
+            "first_alert": null,
+            "lead_minutes": null,
+            "alerts_in_window": 0
+          },
+          {
+            "id": "UCI-03",
+            "start": "2020-06-05T10:00:00",
+            "end": "2020-06-07T14:30:00",
+            "scored_windows": 645,
+            "first_alert": "2020-06-05T10:45:00",
+            "lead_minutes": -45.0,
+            "alerts_in_window": 8
+          },
+          {
+            "id": "UCI-04",
+            "start": "2020-07-15T14:30:00",
+            "end": "2020-07-15T19:00:00",
+            "scored_windows": 126,
+            "first_alert": "2020-07-15T16:55:00",
+            "lead_minutes": -145.0,
+            "alerts_in_window": 2
+          }
+        ]
+      }
+    },
+    "regime_robust": {
+      "calibration": {
+        "threshold": 50.63798118792441,
+        "quantile": 0.9,
+        "alert_count": 14,
+        "alerts_per_scorable_day": 0.5303169801394186
+      },
+      "test": {
+        "alert_count": 25,
+        "unmatched_alerts": 17,
+        "unmatched_alerts_per_scorable_day": 0.13712749271790275,
+        "reported_incidents": 4,
+        "observable_incidents": 4,
+        "matched_incidents": 4,
+        "incident_recall": 1.0,
+        "before_start": 1,
+        "outcomes": [
+          {
+            "id": "UCI-01",
+            "start": "2020-04-18T00:00:00",
+            "end": "2020-04-18T23:59:00",
+            "scored_windows": 358,
+            "first_alert": "2020-04-18T00:40:00",
+            "lead_minutes": -40.0,
+            "alerts_in_window": 1
+          },
+          {
+            "id": "UCI-02",
+            "start": "2020-05-29T23:30:00",
+            "end": "2020-05-30T06:00:00",
+            "scored_windows": 151,
+            "first_alert": "2020-05-29T23:30:00",
+            "lead_minutes": 0.0,
+            "alerts_in_window": 1
+          },
+          {
+            "id": "UCI-03",
+            "start": "2020-06-05T10:00:00",
+            "end": "2020-06-07T14:30:00",
+            "scored_windows": 645,
+            "first_alert": "2020-06-05T10:05:00",
+            "lead_minutes": -5.0,
+            "alerts_in_window": 3
+          },
+          {
+            "id": "UCI-04",
+            "start": "2020-07-15T14:30:00",
+            "end": "2020-07-15T19:00:00",
+            "scored_windows": 126,
+            "first_alert": "2020-07-15T13:35:00",
+            "lead_minutes": 55.0,
+            "alerts_in_window": 3
+          }
+        ]
+      }
+    }
+  }
+}
