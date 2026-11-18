@@ -13,6 +13,27 @@ The UCI archive contains **1,516,948** observations. The dominant spacing is ten
 
 For the robust model, the four initial alerts occurred 40 minutes after, at the recorded start, 5 minutes after, and 55 minutes before incident start. Incident matching includes up to six hours before the start and the documented event interval. The four matches include detection while incidents were underway. [Measured outcomes](reports/holdout-metrics.json)
 
+## Visual Results Gallery
+
+![Minutes from the documented start to the first alert](figures/results/incident-timing.png)
+
+A negative value denotes an early alert. The regime-aware model led the fourth incident by 55 minutes.
+
+![Event matching and unmatched alert burden](figures/results/detector-tradeoffs.png)
+
+Evaluate matches and alert burden together. Unmatched alerts may include unannotated incidents.
+
+![Scorable windows by time and load regime](figures/results/scorable-windows.png)
+
+The figure shows the amount of usable data in each chronological period.
+
+Recreate the gallery from the reports or run outputs listed below.
+
+```sh
+python -m pip install -r requirements-visuals.txt
+python plot_results.py
+```
+
 ## Data and method
 
 ```mermaid
